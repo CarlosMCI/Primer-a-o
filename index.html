@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡El Primer Añito de Fernando José!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div data-reveal class="hero-content visible">
+            <p class="parent-names">Luis & Judith invitan al primer añito de:</p>
+            <h1>Fernando José</h1>
+            <p class="subtitle">¡Mis primeros 365 días! Acompáñame a celebrar un año lleno de sonrisas, descubrimientos y mucho amor.</p>
+            <div class="scroll-down">↓ Desliza para ver mis fotos ↓</div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2 data-reveal>Un año lleno de aventuras</h2>
+        <div class="photo-grid">
+            <div class="photo-card" data-reveal>
+                <img src="foto3.jpeg" alt="Donde todo comenzó...">
+                <p>Donde todo comenzó...</p>
+            </div>
+            <div class="photo-card" data-reveal>
+                <img src="foto 4.jpeg" alt="Descubriendo el mundo">
+                <p>Descubriendo el mundo</p>
+            </div>
+            <div class="photo-card" data-reveal>
+                <img src="foto5.jpeg" alt="Mis primeras sonrisas">
+                <p>Mis primeras sonrisas</p>
+            </div>
+            <div class="photo-card" data-reveal>
+                <img src="foto2.jpeg" alt="¡Ya tengo 1 año!">
+                <p>¡Ya tengo 1 año!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="card-invitation" data-reveal>
+            <h2>¡Estás invitado!</h2>
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <span>Lugar: psje Francisco Pizarro 251 , San Patricio</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">📅</span>
+                <span>Fecha: Miércoles 22 de abril</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">⏰</span>
+                <span>Hora: 6:00 pm</span>
+            </div>
+            
+            <p class="final-message">¡No faltes, te esperamos!</p>
+            
+            <button class="btn-confirm" onclick="lanzarConfeti()">¡Confirmar asistencia!</button>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
