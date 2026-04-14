@@ -72,28 +72,36 @@
         </div>
     </section>
 
-    <section class="info">
+<<section class="info">
         <div class="decor cloud c2"></div>
         <div class="decor planet p3"></div>
+
+        <div class="principito-gif-float">
+            <img src="pricipe.png" alt="Principito Flotando">
+        </div>
+        <div class="zorro-gif-float">
+            <img src="descarga.png" alt="Zorro Flotando">
+        </div>
 
         <div class="card-invitation" data-reveal>
             <h2>¡Estás invitado!</h2>
             <p class="invitation-text">Acompáñanos a celebrar este día tan especial.</p>
+            
             <div class="info-item">
                 <span class="icon">📍</span>
-                <span>Lugar: Psje Francisco Pizarro 251 , San Patricio</span>
-            </div>
-            <div class="info-item">
-                <span class="icon">📅</span>
-                <span>Fecha: Miércoles 22 de abril</span>
-            </div>
-            <div class="info-item">
-                <span class="icon">⏰</span>
-                <span>Hora: 6:00 pm</span>
+                <span>Lugar: Psje Francisco Pizarro 251, San Patricio</span>
             </div>
             <button class="btn-confirm" onclick="lanzarConfeti()">¡Confirmar asistencia!</button>
         </div>
     </section>
+
+    <audio id="bgMusic" loop autoplay>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer; background: rgba(255, 215, 0, 0.3); padding: 10px; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border: 1px solid white;">
+    <span id="music-icon">🔊</span>
+</div>
 
     <script src="script.js"></script>
 </body>

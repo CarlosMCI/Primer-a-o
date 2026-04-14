@@ -15,10 +15,19 @@
 }
 
 /* --- ESTILOS GLOBALES --- */
+/* --- ESTILOS GLOBALES CON NUEVO DEGRADADO --- */
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: var(--azul-noche);
-    background-image: radial-gradient(circle at center, var(--azul-espacial) 0%, var(--azul-noche) 100%);
+    
+    /* CAMBIO AQUÍ: Degradado de Celeste a Azul Espacial */
+    background-image: radial-gradient(
+        circle at center, 
+        #1b8ecc 0%,    /* Celeste brillante en el centro */
+        #034c9ad8 40%,   /* Azul intermedio */
+        #197cb1 100%   /* Azul noche en los bordes */
+    );
+    
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -298,5 +307,78 @@ button.btn-confirm {
         width: 50px !important;
         height: 50px !important;
         right: 2% !important;
+    }
+}
+/* --- ESTILOS PARA GIFS FLOTANTES --- */
+
+/* --- ESTILOS PARA GIFS FLOTANTES GRANDES --- */
+
+/* --- ESTILOS PARA GIFS FLOTANTES (FUERA DEL CUADRO) --- */
+
+.principito-gif-float,
+.zorro-gif-float {
+    position: absolute; 
+    pointer-events: none; 
+    animation: float 5s ease-in-out infinite;
+    z-index: 1; /* Esto los mantiene por DEBAJO de la tarjeta blanca */
+    
+    /* Centrado vertical perfecto en la sección */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* --- ESTILOS PARA GIFS FLOTANTES (FUERA DEL CUADRO) --- */
+
+.principito-gif-float,
+.zorro-gif-float {
+    position: absolute; 
+    pointer-events: none; 
+    animation: float 5s ease-in-out infinite;
+    z-index: 1; /* Esto los mantiene por DEBAJO de la tarjeta blanca */
+    
+    /* Centrado vertical perfecto en la sección */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.principito-gif-float img,
+.zorro-gif-float img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+}
+
+/* POSICIONAMIENTO EN PC: Los mandamos a los extremos azules */
+.principito-gif-float {
+    width: 320px; /* Tamaño grande para llenar el vacío */
+    left: 2%;     /* Casi pegado al borde izquierdo de la pantalla */
+}
+
+.zorro-gif-float {
+    width: 280px; 
+    right: 2%;    /* Casi pegado al borde derecho de la pantalla */
+}
+
+/* --- AJUSTE PARA CELULAR (Para que no estorben la lectura) --- */
+@media (max-width: 768px) {
+    .principito-gif-float,
+    .zorro-gif-float {
+        /* En móvil los subimos o bajamos un poco para que no choquen con el texto central */
+        top: auto; 
+        transform: none;
+    }
+
+    .principito-gif-float {
+        width: 100px;
+        bottom: 0%;   /* Lo bajamos al fondo a la izquierda */
+        left: 170px;  /* Que sobresalga un poquito del borde */
+        opacity: 1; /* Un poco transparente para que se lea bien el cuadro */
+    }
+
+    .zorro-gif-float {
+        width: 160px;
+        top: -2%;      /* Lo subimos al tope a la derecha */
+        right: 150px;
+        opacity: 1;
     }
 }
